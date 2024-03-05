@@ -8,7 +8,6 @@ import Setting from './Pages/Setting/Setting';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './Theme/Theme.js';
 import DetailHistory from './Pages/History/DetailHistory.jsx';
-import AccountDetails from './Pages/AccontsDetails/AccountDetails.jsx';
 
 function App() {
   return (
@@ -21,8 +20,6 @@ function App() {
           <Route path='/logout' element={<Protected><Login /></Protected>} />
           <Route path='/setting' element={<Protected><Setting /></Protected>} />
           <Route path='/detailhistory' element={<Protected><DetailHistory /></Protected>} />
-          {/* <Route path='/accountdetails' element={<Protected><AccountDetails /></Protected>} /> */}
-          <Route path='/accountdetails/:accountId' element={<Protected><AccountDetails /></Protected>} />
 
           <Route path='*' element={<div className='text-center' style={{ fontSize: '30px' }}>Route Not Found....</div>} />
         </Routes>
